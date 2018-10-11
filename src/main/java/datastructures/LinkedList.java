@@ -4,13 +4,18 @@ package datastructures;
    Implementing some code to help understand the linked list data structure.
  */
 
+
+import org.apache.log4j.Logger;
+
 public class LinkedList {
+//   protected static Logger log = Logger.getLogger(LinkedList.class);
    Node head;
 
    /*
      The append method here is to illustrate how we add data to a linked list
     */
    public Node append(int data){
+
       //if no head then the new node will become the head
       if(head == null){
          head = new Node(data);
@@ -38,16 +43,29 @@ public class LinkedList {
       return head;
    }
 
-   public void printList(Node node){
-      System.out.println("Nodes in the list:");
-      while(node != null){
-         System.out.println(node.getValue());
-         node = node.getNext();
+   public void delete(int data){
+      //usecase 1: there is no head
+      if(head ==  null) return;
+      //usecase 2: value to be deleted is the head value
+      if(head.getValue() == data){
+         head = head.getNext();
+      }
+      //usecase 3: delete a node with matching data
+      Node current = head;
+      while(current.getNext() != null){
+         if(current.getNext().getValue() == data){
+            current.setNext(current.getNext().getNext());
+         }
+         current = current.getNext();
       }
    }
 
-   public void printHead(){
-      System.out.println("Head of the list:");
-      System.out.println(head.getValue());
+   public Node getHead(){
+      return head;
    }
+
+   public void setHead(Node node) {
+      head = node;
+   }
+
 }
