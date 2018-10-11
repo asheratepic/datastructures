@@ -2,14 +2,9 @@ package datastructures;
 
 public class NodeChain {
    public static void main(String[] args) {
-      Node first = new Node();
-      first.setValue(5);
-
-      Node middle = new Node();
-      middle.setValue(3);
-
-      Node last = new Node();
-      last.setValue(7);
+      Node first = new Node(5);
+      Node middle = new Node(3);
+      Node last = new Node(7);
 
       //let's chain these nodes
       first.setNext(middle);
