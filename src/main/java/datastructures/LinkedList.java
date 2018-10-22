@@ -49,6 +49,7 @@ public class LinkedList {
       //usecase 2: value to be deleted is the head value
       if(head.getValue() == data){
          head = head.getNext();
+         return;
       }
       //usecase 3: delete a node with matching data
       Node current = head;
