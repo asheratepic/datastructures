@@ -41,7 +41,7 @@ public class TestLinkedList {
 
     */
    public static void reverseLinkedList(){
-      Node currentNode = list.head;
+      Node currentNode = list.getHead();
       Node previous = null;
       Node next;
       //if head is pointing to null then we are done
@@ -55,7 +55,7 @@ public class TestLinkedList {
          previous = currentNode;
          currentNode = next;
       }
-      list.head = previous;
+      list.setHead(previous);
    }
 
    public static void printLinkedList() {

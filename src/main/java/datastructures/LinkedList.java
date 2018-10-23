@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 
 public class LinkedList {
 //   protected static Logger log = Logger.getLogger(LinkedList.class);
-   Node head;
+   private Node head;
 
    /*
      The append method here is to illustrate how we add data to a linked list

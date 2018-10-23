@@ -14,12 +14,12 @@ public class PrintLLUsingRecursion {
       l2.append(9);
       l2.append(11);
 
-      PrintUsingRecursion(l1);
+      printUsingRecursion(l1);
       System.out.println("=================================");
-      ReversePrintUsingRecursion(l2);
+      reversePrintUsingRecursion(l2);
    }
 
-   public static void PrintUsingRecursion(LinkedList ll) {
+   public static void printUsingRecursion(LinkedList ll) {
       Node current = ll.getHead();
       //exit condition
       if (current == null) {
@@ -27,19 +27,19 @@ public class PrintLLUsingRecursion {
          return;
       }
       System.out.println(current.getValue());
-      ll.head = current.getNext();
-      PrintUsingRecursion(ll);
+      ll.getHead().setNext(current.getNext());
+      printUsingRecursion(ll);
    }
 
-   public static void ReversePrintUsingRecursion(LinkedList ll) {
+   public static void reversePrintUsingRecursion(LinkedList ll) {
       Node current = ll.getHead();
       //exit condition
       if (current == null) {
          System.out.println("\n");
          return;
       }
-      ll.head = current.getNext();
-      ReversePrintUsingRecursion(ll);
+      ll.getHead().setNext(current.getNext());
+      reversePrintUsingRecursion(ll);
       System.out.println(current.getValue());
    }
 }
