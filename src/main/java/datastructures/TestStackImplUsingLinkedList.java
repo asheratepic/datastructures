@@ -10,6 +10,7 @@ public class TestStackImplUsingLinkedList {
       stack.push(9);
       stack.printStack();
       stack.pop();
+      stack.pop();
       stack.printStack();
    }
 
