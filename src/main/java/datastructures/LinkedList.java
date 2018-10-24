@@ -37,7 +37,7 @@ public class LinkedList {
       will become the head of the list
     */
    public Node prepend(int data){
-      Node newNode = new Node(2);
+      Node newNode = new Node(data);
       newNode.setNext(head);
       head = newNode;
       return head;

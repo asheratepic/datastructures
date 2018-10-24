@@ -1,9 +1,9 @@
 package datastructures;
 
-public class TestMyStackImpl {
+public class TestStackImplUsingArray {
 
    public static void main(String[] args) {
-      MyStackImpl stack = new MyStackImpl();
+      StackImplUsingArray stack = new StackImplUsingArray();
       stack.push(5);
       stack.push(7);
       stack.push(9);

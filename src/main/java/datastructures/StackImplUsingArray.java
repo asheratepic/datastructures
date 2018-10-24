@@ -1,6 +1,6 @@
 package datastructures;
 
-public class MyStackImpl {
+public class StackImplUsingArray {
    //-1 will indicate that the stack is empty
    private int MAX_SIZE = 10;
    private int top = -1;
